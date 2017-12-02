@@ -1,11 +1,10 @@
 #include "Auditorio.h"
 
 
-void Auditorio(int pos_x, int pos_y)
+void Auditorio(int pos_x, int pos_y,CPersona &hppersona, CEnemigo &hpenemigo)
 {
-    CPersona hppersona;
         ///////////////////////////////////Dibujo de los Sprites///////////////////////////////////////////////////////////////
-        RenderWindow window(sf::VideoMode(1024, 600), "Bienvenido al Quiz de FÃ­sica");
+        RenderWindow window(sf::VideoMode(1024, 600), "Bienvenido al Quiz de Física");
         Texture Pt;
         Pt.loadFromFile("pSprite.png");
         IntRect SpriteBx(0,0,64,64);
@@ -13,7 +12,7 @@ void Auditorio(int pos_x, int pos_y)
         Psprite.setPosition(pos_x,pos_y);
 
         sf::Texture PixelPenaT;
-        if(!PixelPenaT.loadFromFile("PixelPeÃ±a.png")){}
+        if(!PixelPenaT.loadFromFile("PixelPeña.png")){}
         sf::Sprite PixelPena;
         PixelPena.setTexture(PixelPenaT);
         PixelPena.setPosition(600,-20);
@@ -103,7 +102,7 @@ void Auditorio(int pos_x, int pos_y)
 
                                 if(pos_x <5 && pos_y<190&&pos_y>90)
                                 {
-                                  Entrada(800,100);
+                                  Entrada(800,100,hppersona,hpenemigo);
                                   mii.stop();
                                 }
                                 }
@@ -132,7 +131,7 @@ void Auditorio(int pos_x, int pos_y)
                                 if (pos_x>580 && pos_x<630&& pos_y>20 && pos_y<50){
                                     mii.stop();
                                     window.close();
-                                    Pena();}
+                                    Pena(hppersona);}
 
 
                             }

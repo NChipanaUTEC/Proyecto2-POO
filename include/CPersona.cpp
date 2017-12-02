@@ -1,13 +1,8 @@
 #include "CPersona.h"
 
-CPersona::CPersona()
+CPersona::CPersona():vida(100),nivel(1),atk(40),dfs(10),xp(0),xpmax(10)
 {
-    vida=100;
-	nivel = 1;
-	atk = 40;
-	dfs = 10;
-	xp = 0;
-	xpmax = 10;
+
 }
 
 CPersona::~CPersona()
@@ -100,5 +95,5 @@ int CPersona::get_y()
 
 int CPersona::aumento_nivel()
 {
-    return nivel++;
+    return CPersona::nivel ++;
 }

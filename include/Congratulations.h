@@ -2,6 +2,7 @@
 #define CONGRATULATIONS_H_INCLUDED
 
 #include "SFML/Graphics.hpp"
+#include "SFML/Audio.hpp"
 
 using namespace sf;
 

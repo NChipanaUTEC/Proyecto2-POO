@@ -20,6 +20,6 @@ using std::chrono::system_clock;
 using namespace sf;
 using namespace std;
 
-void FightScreen();
+void FightScreen(CPersona &hppersona, CEnemigo &hpenemigo);
 
 #endif // FIGHTSCREEN_H_INCLUDED

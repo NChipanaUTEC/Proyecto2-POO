@@ -11,6 +11,6 @@
 using namespace sf;
 
 
-void introduccion();
+void introduccion(CPersona &per, CEnemigo &ene);
 
 #endif // INTRO_H_INCLUDED

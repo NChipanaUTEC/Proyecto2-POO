@@ -1,9 +1,8 @@
 #include "pena.h"
 
 
-void Pena()
+void Pena(CPersona &hppersona)
 {
-    CPersona hppersona;
     CPena hpenemigo;
     int vidaoriginal = hppersona.get_vida();
     int vidapena = hpenemigo.get_vidae();
@@ -162,6 +161,16 @@ void Pena()
                                 hppersona.setvida(hppersona.get_vida()-poder);
                             vidaR.setSize(sf::Vector2f(hppersona.get_vida(),20));
                             cout << "TU VIDA ES: "<< hppersona.get_vida() << endl;
+                              if (hpenemigo.get_vidae()<=0)
+                            {
+                                vidaeR.setPosition(10000,100000);
+                                log.setString("Ganaste !!");
+                                sleep_until (system_clock::now()+2s);
+                                BM.stop();
+                                Congratulations();
+                                window.close();
+                                break;
+                            }
                             if (hppersona.get_vida()<=0)
                             {
                                 vidaR.setPosition(10000,100000);
@@ -179,16 +188,6 @@ void Pena()
                             if (hpenemigo.get_vidae() < vidapena/0.6 && hpenemigo.get_vidae()> 0)
                             {
                                 vidaeR.setFillColor(Color::Red);
-                                break;
-                            }
-                            if (hpenemigo.get_vidae()<=0)
-                            {
-                                vidaeR.setPosition(10000,100000);
-                                log.setString("Ganaste !!");
-                                sleep_until (system_clock::now()+2s);
-                                BM.stop();
-                                Congratulations();
-                                window.close();
                                 break;
                             }
                             break;

@@ -1,20 +1,16 @@
 #include "FightScreen.h"
 
-void FightScreen()
+void FightScreen(CPersona& hppersona, CEnemigo &hpenemigo)
 {
     srand(time(NULL));
-    CPersona hppersona;
-    CEnemigo hpenemigo;
 
     int vidaoriginal = hppersona.get_vida();
     int random;
-    int Mrandom;
     int poder;
     ////////////////////////////declaraciones y pantalla//////////////////////////////
     int x = 60;
     int pos = x;
     random = rand()%3;
-    Mrandom = rand()%1;
     RenderWindow window(VideoMode(1024, 600), "The Wheel of fate is turning!!");
     //Sprites: inicio//////////////////////////////////////////////////////////////
     Texture Ptexture;
@@ -90,12 +86,9 @@ void FightScreen()
     //Sprites: Final////////////////////////////////////////////////////////////
 
     //Musica: Inicio///////////////////////////////////////////////////////////
-    srand(time(NULL));
-    sf::Music BM;
-    if(Mrandom == 0)
-        if (!BM.openFromFile("PKm_trapp.wav")) {}
-    if(Mrandom == 1)
-        if(!BM.openFromFile("Bmusic.wav"))
+
+    sf:: Music BM;
+    if(!BM.openFromFile("Bmusic.wav"))
     BM.setLoop(true);
     BM.play();
 
@@ -220,7 +213,7 @@ void FightScreen()
                                     log.setString("Subiste de nivel!");
                                     cout << endl << "Subiste de nivel!";
                                     hppersona.setvida(vidaoriginal+15);
-                                    hppersona.aumento_nivel();
+                                    hppersona.setnivel(hppersona.get_nivel()+1);
                                     cout << endl << "Tu nivel es: " << hppersona.get_nivel();
                                     hppersona.setatk(hppersona.get_atk()+ 10);
                                     hppersona.setdfs(hppersona.get_dfs()+10);

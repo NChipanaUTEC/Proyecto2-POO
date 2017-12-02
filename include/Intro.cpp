@@ -1,6 +1,6 @@
 #include "Intro.h"
 
-void introduccion()
+void introduccion(CPersona &per, CEnemigo &ene)
 {
     int y = 220;
     RenderWindow window(VideoMode(600, 400), ":D");
@@ -64,7 +64,7 @@ void introduccion()
                             if(y==220)
                             {
                                 window.close();
-                                Entrada(20,100);
+                                Entrada(20,100,per,ene);
                             }
                             break;
                         }

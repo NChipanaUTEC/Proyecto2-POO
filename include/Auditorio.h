@@ -12,7 +12,7 @@
 
 using namespace sf;
 
-void Auditorio (int pos_x, int pos_y);
+void Auditorio (int pos_x, int pos_y, CPersona &hppersona, CEnemigo &hpenemigo);
 
 
 #endif // AUDITORIO_H_INCLUDED

@@ -1,16 +1,22 @@
 #include "Congratulations.h"
 
 void Congratulations () {
-    RenderWindow window(VideoMode(600, 400), ":D");
+    RenderWindow window(VideoMode(1024, 600), ":D");
 
     Font font;
     if (!font.loadFromFile("Pixel_font.ttf")) {}
     Text Cong;
     Cong.setFont(font);
     Cong.setString("EL CACHIMBO SUPERÓ LO INSUPERABLE Y LOGRÓ LO INIMAGINABLE!");
-    Cong.setCharacterSize(75);
+    Cong.setCharacterSize(55);
     Cong.setColor(Color::Yellow);
-    Cong.setPosition(300,200);
+    Cong.setPosition(100,250);
+
+
+    sf::Music BM;
+    if (!BM.openFromFile("PKm_trapp.wav")) {}
+    BM.setLoop(true);
+    BM.play();
 
     while (window.isOpen())
         {
@@ -25,8 +31,8 @@ void Congratulations () {
                         }
 
             window.clear();
-            window.display();
             window.draw(Cong);
+            window.display();
           }
         }
 }

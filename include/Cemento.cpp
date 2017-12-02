@@ -1,8 +1,7 @@
 #include "Cemento.h"
 
-void Entrada(int pos_x, int pos_y)
+void Entrada(int pos_x, int pos_y, CPersona &per, CEnemigo &ene)
 {
-    CPersona per;
     int x;
     string vidaarr[13]= {"NIVEL:0","NIVEL:1","NIVEL:2","NIVEL:3","NIVEL:4","NIVEL:5","NIVEL:6","NIVEL:7","NIVEL:8","NIVEL:9","NIVEL:10","NIVEL:11","NIVEL:12"};
     ///////////////////////////////////Dibujo de los Sprites///////////////////////////////////////////////////////////////
@@ -62,7 +61,7 @@ void Entrada(int pos_x, int pos_y)
                         per.setx(posx);
                         per.sety(posy);
                         mii.stop();
-                        FightScreen();
+                        FightScreen(per, ene);
                         mii.play();
                     }
                     if (clock.getElapsedTime().asMilliseconds()>32)
@@ -96,7 +95,7 @@ void Entrada(int pos_x, int pos_y)
                         per.setx(posx);
                         per.sety(posy);
                         mii.stop();
-                        FightScreen();
+                        FightScreen(per, ene);
                         mii.play();
                     }
                     if (clock.getElapsedTime().asMilliseconds()>32)
@@ -131,7 +130,7 @@ void Entrada(int pos_x, int pos_y)
                             per.setx(posx);
                             per.sety(posy);
                             mii.stop();
-                            FightScreen();
+                            FightScreen(per, ene);
                             mii.play();
                         }
                         if (clock.getElapsedTime().asMilliseconds()>32)
@@ -166,7 +165,7 @@ void Entrada(int pos_x, int pos_y)
                             per.setx(posx);
                             per.sety(posy);
                             mii.stop();
-                            FightScreen();
+                            FightScreen(per, ene);
                             mii.play();
                         }
                         if (clock.getElapsedTime().asMilliseconds()>32)
@@ -189,7 +188,7 @@ void Entrada(int pos_x, int pos_y)
                         {
                             mii.stop();
                             window.close();
-                            Auditorio(100,150);
+                            Auditorio(100,150,per,ene);
                         }
                     }
                 }

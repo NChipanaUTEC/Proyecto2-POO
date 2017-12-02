@@ -19,7 +19,7 @@
 using namespace std;
 using namespace sf;
 
-void Entrada(int pos_x, int pos_y);
+void Entrada(int pos_x, int pos_y, CPersona &per, CEnemigo &ene);
 
 
 #endif  //CEMENTO_H_INCLUDED

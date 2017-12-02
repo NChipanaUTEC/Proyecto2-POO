@@ -20,6 +20,6 @@ using namespace std::chrono_literals; // ns, us, ms, s, h, etc.
 using std::chrono::system_clock;
 using namespace sf;
 
-void Pena();
+void Pena(CPersona &hppersona);
 #endif // PENA_H_INCLUDED
 
