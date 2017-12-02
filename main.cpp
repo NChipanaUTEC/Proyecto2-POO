@@ -20,7 +20,7 @@ int main()
     per.setdfs(per.get_dfs()+3);
     per.setxpmax(per.get_xpmax()*1.5);
     per.setxp(0);
-    introduccion();
+    introduccion(per,ene);
 
     return 0;
 }
