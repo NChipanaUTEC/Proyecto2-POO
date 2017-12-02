@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SFML" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SFML" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-audio-d" />
+					<Add library="sfml-network-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SFML" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-audio" />
+					<Add library="sfml-network" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++14" />
+			<Add option="-fexceptions" />
+			<Add directory="C:/Users/chavez/Desktop/SFML-2.4.2-windows-gcc-4.9.2-tdm-32-bit/SFML-2.4.2/include" />
+		</Compiler>
+		<Linker>
+			<Add directory="C:/Users/chavez/Desktop/SFML-2.4.2-windows-gcc-4.9.2-tdm-32-bit/SFML-2.4.2/lib" />
+		</Linker>
+		<Unit filename="include/Auditorio.cpp" />
+		<Unit filename="include/Auditorio.h" />
+		<Unit filename="include/CEnemigo.cpp" />
+		<Unit filename="include/CEnemigo.h" />
+		<Unit filename="include/CPena.cpp" />
+		<Unit filename="include/CPena.h" />
+		<Unit filename="include/CPersona.cpp" />
+		<Unit filename="include/CPersona.h" />
+		<Unit filename="include/Cemento.cpp" />
+		<Unit filename="include/Cemento.h" />
+		<Unit filename="include/Congratulations.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="include/Congratulations.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="include/FIghtSis.cpp" />
+		<Unit filename="include/FIghtSis.h" />
+		<Unit filename="include/FightScreen.cpp" />
+		<Unit filename="include/FightScreen.h" />
+		<Unit filename="include/GG.cpp" />
+		<Unit filename="include/GG.h" />
+		<Unit filename="include/Intro.cpp" />
+		<Unit filename="include/Intro.h" />
+		<Unit filename="include/pena.cpp" />
+		<Unit filename="include/pena.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
