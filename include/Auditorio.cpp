@@ -4,21 +4,8 @@
 void Auditorio(int pos_x, int pos_y)
 {
     CPersona hppersona;
-    for(int i = 0; i < 25; i++)
-    {
-    hppersona.setvida(hppersona.get_vida()+15);
-    cout << endl << "Tu VIDA es: " << hppersona.get_vida();
-    hppersona.aumento_nivel();
-    cout << endl << "Tu NIVEL es: " << hppersona.get_nivel();
-    hppersona.setatk(hppersona.get_atk()+ 10);
-    cout << endl << "Tu ATAQUE es: " << hppersona.get_atk();
-    hppersona.setdfs(hppersona.get_dfs()+10);
-    cout << endl << "Tu DEFENSA es: " << hppersona.get_dfs();
-    hppersona.setxpmax(hppersona.get_xpmax()*1.5);
-    cout << endl << "Tu XP MAX es: " << hppersona.get_xpmax() << endl << endl;
-    }
         ///////////////////////////////////Dibujo de los Sprites///////////////////////////////////////////////////////////////
-        RenderWindow window(sf::VideoMode(1024, 600), "Bienvenido al Quiz de Física");
+        RenderWindow window(sf::VideoMode(1024, 600), "Bienvenido al Quiz de FÃ­sica");
         Texture Pt;
         Pt.loadFromFile("pSprite.png");
         IntRect SpriteBx(0,0,64,64);
@@ -26,7 +13,7 @@ void Auditorio(int pos_x, int pos_y)
         Psprite.setPosition(pos_x,pos_y);
 
         sf::Texture PixelPenaT;
-        if(!PixelPenaT.loadFromFile("PixelPeña.png")){}
+        if(!PixelPenaT.loadFromFile("PixelPeÃ±a.png")){}
         sf::Sprite PixelPena;
         PixelPena.setTexture(PixelPenaT);
         PixelPena.setPosition(600,-20);
